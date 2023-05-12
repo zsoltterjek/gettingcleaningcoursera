@@ -86,4 +86,8 @@ melted_whole_data <- melt(whole_data_MSD, id = c("subject", "activities"))
 
 tidy_whole_data <- dcast(melted_whole_data, subject + activities ~ variable, mean)
 
+#write the tidy dataset to a text file
+
+write.table(tidy_whole_data, file = "C:/Users/zterjek/Desktop/PTP/final_tidy_data.txt")
+
 #End of the code
